@@ -26,6 +26,7 @@ const headerOneController = async (req, res) => {
       const imagePath = savedHeader[0].Image;
 
       unlink(imagePath, (err) => {
+        console.log(err);
         if (err) {
           throw new Error("Image deletion failed");
         }
